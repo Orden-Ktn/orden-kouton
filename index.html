@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orden Kouton — Développeur Full Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="images/logo_orden.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Theme toggle -->
+  <button class="theme-btn" id="themeBtn" title="Changer le thème" aria-label="Basculer thème">
+    <span class="icon-moon">🌙</span>
+    <span class="icon-sun">☀️</span>
+  </button>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lb">
+    <button class="lb-close" id="lbClose">×</button>
+    <img id="lbImg" src="" alt="">
+  </div>
+
+  <!-- ══ NAV ══ -->
+  <nav id="mainNav">
+    <a href="#hero" class="nav-logo">
+      <img src="images/logo_orden.png" alt="Orden Donadieu" class="nav-avatar">
+      Orden<em>KOUTON</em>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#experience">Parcours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="ham" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav" id="mobNav">
+    <a href="#about"      onclick="closeMob()">À propos</a>
+    <a href="#skills"     onclick="closeMob()">Compétences</a>
+    <a href="#projects"   onclick="closeMob()">Projets</a>
+    <a href="#experience" onclick="closeMob()">Parcours</a>
+    <a href="#contact"    onclick="closeMob()">Contact</a>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-ambient">
+      <div class="blob1"></div>
+      <div class="blob2"></div>
+      <div class="hero-grid-lines"></div>
+    </div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-label fi-tag">
+          <span class="hero-label-dot"></span>
+          Développeur Full Stack
+        </div>
+        <h1 class="hero-h1 fi-h1">
+          Votre produit digital,<span class="shift">livré <em>vite</em> et bien.</span>
+        </h1>
+        <p class="hero-lead fi-lead">
+          <strong>Startups, entreprises, porteurs de projet</strong> — je transforme vos besoins métier en applications web robustes et évolutives. API Django, interfaces Angular, base de données maîtrisée : un seul développeur pour toute la stack.
+        </p>
+        <div class="hero-cta fi-cta">
+          <a href="#projects" class="btn-fill">Voir mes projets →</a>
+          <a href="#contact"  class="btn-outline">Discutons</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap fi-photo">
+        <div class="hero-photo-frame">
+          <img src="images/ordenkouton.jpg" alt="Orden Donadieu Fifa Kouton">
+          <div class="hero-photo-overlay"></div>
+          
+        </div>
+        <div class="hero-deco"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <div class="wrap">
+      <div class="eyebrow rv"><span class="eyebrow-num">01</span><span class="eyebrow-line"></span><span class="eyebrow-label">À propos</span></div>
+      <h2 class="s-title rv">Bâtisseur de <em>solutions</em> numériques</h2>
+      <div class="about-grid">
+        <div class="rv-l">
+          <div class="about-text">
+            <p>Diplômé d'une <strong>Licence Professionnelle en Systèmes Informatiques et Logiciels</strong>, je développe des applications web complètes — de la base de données à l'interface utilisateur.</p>
+            <p>Avec mon approche qui est centrée sur l'utilisateur : outils efficaces, durables, ergonomiques, je conçois des systèmes qui répondent à de vrais besoins.</p>
+            <p>Autonome, rigoureux, et toujours curieux, j'aime m'approprier des domaines nouveaux pour y apporter de la valeur technique.</p>
+            <div style="margin-top:2rem">
+              <a href="#contact" class="btn-fill">Discutons d'un projet →</a>
+            </div>
+          </div>
+        
+        </div>
+        <div class="rv-r">
+          <div class="stats-mosaic">
+            <div class="sm-box rv d1"><div class="sm-n"><em>02</em></div><div class="sm-l">Années de pratique</div></div>
+            <div class="sm-box rv d2"><div class="sm-n"><em>11</em></div><div class="sm-l">Projets personnels</div></div>
+            <div class="sm-box rv d3"><div class="sm-n"><em>02</em></div><div class="sm-l">Clients satisfaits</div></div>
+            <div class="sm-box rv d4"><div class="sm-n"><em>03</em></div><div class="sm-l">Stages réalisés</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SKILLS ══ -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="eyebrow rv"><span class="eyebrow-num">02</span><span class="eyebrow-line"></span><span class="eyebrow-label">Compétences</span></div>
+      <h2 class="s-title rv">Ce que je <em>maîtrise</em></h2>
+      <div class="skills-grid">
+        <div class="sk-card rv d1"><span class="sk-num">01</span><div class="sk-name">Front-end</div><p class="sk-desc">Interfaces modernes, réactives et accessibles grâce à Angular et au design de composants interactifs.</p><div class="sk-tags"><span class="sk-tag">Angular</span><span class="sk-tag">TypeScript</span><span class="sk-tag">JavaScript</span><span class="sk-tag">HTML/CSS</span></div></div>
+        <div class="sk-card rv d2"><span class="sk-num">02</span><div class="sk-name">Back-end</div><p class="sk-desc">APIs REST robustes, logique métier structurée, modules automatisés — auth, notifications, gestion.</p><div class="sk-tags"><span class="sk-tag">Django</span><span class="sk-tag">Django REST</span><span class="sk-tag">Python</span><span class="sk-tag">Laravel</span><span class="sk-tag">PHP</span></div></div>
+        <div class="sk-card rv d3"><span class="sk-num">03</span><div class="sk-name">Base de données</div><p class="sk-desc">Modélisation rigoureuse, requêtes optimisées et migrations fiables pour des données bien structurées.</p><div class="sk-tags"><span class="sk-tag">PostgreSQL</span><span class="sk-tag">MySQL</span></div></div>
+        <div class="sk-card rv d4"><span class="sk-num">04</span><div class="sk-name">Conception logicielle</div><p class="sk-desc">Analyse et modélisation des besoins avant tout développement, pour des architectures pérennes.</p><div class="sk-tags"><span class="sk-tag">UML</span><span class="sk-tag">Merise</span><span class="sk-tag">MCD/MLD</span></div></div>
+        <div class="sk-card rv d5"><span class="sk-num">05</span><div class="sk-name">Versioning &amp; Outils</div><p class="sk-desc">Gestion de versions et collaboration avec les standards de l'industrie logicielle.</p><div class="sk-tags"><span class="sk-tag">Git</span><span class="sk-tag">GitHub</span><span class="sk-tag">GitLab</span></div></div>
+        <div class="sk-card rv d6"><span class="sk-num">06</span><div class="sk-name">Savoir-être</div><p class="sk-desc">Créativité dans la conception, autonomie dans l'exécution, curiosité et rigueur permanentes.</p><div class="sk-tags"><span class="sk-tag">Créativité</span><span class="sk-tag">Autonomie</span><span class="sk-tag">Curiosité</span><span class="sk-tag">Rigueur</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="eyebrow rv"><span class="eyebrow-num">03</span><span class="eyebrow-line"></span><span class="eyebrow-label">Réalisations</span></div>
+      <h2 class="s-title rv">Ce que j'ai <em>construit</em></h2>
+      <div class="proj-list" style="margin-top:3rem">
+
+        <div class="proj-item rv">
+          <div class="proj-n">01</div>
+          <div>
+            <div class="proj-head"><div class="proj-title">GestSchool — Gestion scolaire</div><div class="proj-arrow">↗</div></div>
+            <p class="proj-desc">Application complète : élèves, notes, classes, paiements et bulletins pour établissements scolaires.</p>
+            <div class="proj-tags-row"><span class="p-tag">Django</span><span class="p-tag">PostgreSQL</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet1/1.png" alt="GestSchool vue 1"></div>
+              <div class="p-img"><img src="images/projet1/2.png" alt="GestSchool vue 2"></div>
+              <div class="p-img"><img src="images/projet1/3.png" alt="GestSchool vue 3"></div>
+              <div class="p-img"><img src="images/projet1/4.png" alt="GestSchool vue 4"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">02</div>
+          <div>
+            <div class="proj-head"><div class="proj-title">HospitalManager — Gestion hospitalière</div><div class="proj-arrow">↗</div></div>
+            <p class="proj-desc">Patients, consultations, rendez-vous et dossiers médicaux dans un environnement sécurisé et ergonomique.</p>
+            <div class="proj-tags-row"><span class="p-tag">Laravel</span><span class="p-tag">Angular</span><span class="p-tag">MySQL</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet2/6.png" alt="HospitalManager vue 1"></div>
+              <div class="p-img"><img src="images/projet2/5.png" alt="HospitalManager vue 2"></div>
+              <div class="p-img"><img src="images/projet2/1.png" alt="HospitalManager vue 3"></div>
+              <div class="p-img"><img src="images/projet2/7.png" alt="HospitalManager vue 4"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">03</div>
+          <div>
+            <div class="proj-head"><div class="proj-title">SAM-AC GestGrade — Tâches communautaires</div><div class="proj-arrow">↗</div></div>
+            <p class="proj-desc">Suivi des tâches pour la communauté diocésaine des Servants de messe de l'archidiocèse de Cotonou.</p>
+            <div class="proj-tags-row"><span class="p-tag">Django</span><span class="p-tag">JavaScript</span><span class="p-tag">PostgreSQL</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet3/6.png" alt="SAM-AC vue 1"></div>
+              <div class="p-img"><img src="images/projet3/1.png" alt="SAM-AC vue 2"></div>
+              <div class="p-img"><img src="images/projet3/2.png" alt="SAM-AC vue 3"></div>
+              <div class="p-img"><img src="images/projet3/4.png" alt="SAM-AC vue 4"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">04</div>
+          <div>
+            <div class="proj-head"><div class="proj-title">TailorBook — Gestion de commandes tailleurs</div><div class="proj-arrow">↗</div></div>
+            <p class="proj-desc">Commandes, mesures clients, délais de livraison et paiements pour artisans tailleurs.</p>
+            <div class="proj-tags-row"><span class="p-tag">Django</span><span class="p-tag">PostgreSQL</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet4/4.png" alt="TailorBook vue 1"></div>
+              <div class="p-img"><img src="images/projet4/5.png" alt="TailorBook vue 2"></div>
+              <div class="p-img"><img src="images/projet4/6.png" alt="TailorBook vue 3"></div>
+              <div class="p-img"><img src="images/projet4/1.png" alt="TailorBook vue 4"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">05</div>
+          
+            <div>
+              <div class="proj-head">
+                <div class="proj-title">
+                  <a href="https://empsbshd.pythonanywhere.com/" target="_blank" class="project-link">
+                    Site web & Plateforme d'une communauté chrétienne catholique
+                  </a>
+                </div>
+                <div class="proj-arrow"><a href="https://empsbshd.pythonanywhere.com/" target="_blank" class="project-link">↗</a></div>
+              </div>
+
+              <p class="proj-desc">
+                Site web de l'Enfance Missionnaire de la paroisse Ste Bernadette de Hêvié
+                couplé à la plateforme d'inscription pour l'activité de vacances
+                <em>"Semaine du Talent"</em>.
+              </p>
+
+              <div class="proj-tags-row">
+                <span class="p-tag">Django</span>
+                <span class="p-tag">MySQL</span>
+              </div>
+
+              <div class="proj-imgs c2">
+                <div class="p-img"><img src="images/projet7/1.png" alt="EM DODJI vue 1"></div>
+                <div class="p-img"><img src="images/projet7/2.png" alt="EM DODJI vue 2"></div>
+                <div class="p-img"><img src="images/projet7/3.png" alt="EM DODJI vue 3"></div>
+                <div class="p-img"><img src="images/projet7/4.png" alt="EM DODJI vue 4"></div>
+              </div>
+            </div>
+          
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">06</div>
+          <div>
+            <div class="proj-head">
+              <div class="proj-title">
+                <a href="https://zenithapps.pythonanywhere.com/VorteKey/" target="_blank" class="project-link">
+                  VorteKey — Générateur de mot de passe
+                </a>
+              </div>
+              <div class="proj-arrow">
+                <a href="https://zenithapps.pythonanywhere.com/VorteKey/" target="_blank" class="project-link">↗</a>
+              </div>
+            </div>
+            <p class="proj-desc">Générateur de mots de passe sécurisés et personnalisables.</p>
+            <div class="proj-tags-row"><span class="p-tag">Django</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet5/2.png" alt="VorteKey vue 1"></div>
+              <div class="p-img"><img src="images/projet5/1.png" alt="VorteKey vue 1"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">07</div>
+          <div>
+            <div class="proj-head">
+              <div class="proj-title">
+                <a href="https://zenithapps.pythonanywhere.com/DeviZio/" target="_blank" class="project-link">
+                  DeviZio — Convertisseur de devises
+                </a>
+              </div>
+              <div class="proj-arrow">
+                <a href="https://zenithapps.pythonanywhere.com/DeviZio/" target="_blank" class="project-link">↗</a>
+              </div>
+            </div>
+            <p class="proj-desc">Convertisseur de devises en temps réel.</p>
+            <div class="proj-tags-row"><span class="p-tag">Django</span><span class="p-tag">API Rest</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet6/2.png" alt="Devizio vue 1"></div>
+              <div class="p-img"><img src="images/projet6/1.png" alt="Devizio vue 1"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">08</div>
+          <div>
+            <div class="proj-head">
+              <div class="proj-title">
+                <a href="https://zenithapps.pythonanywhere.com/LandInfo/" target="_blank" class="project-link">
+                  LandInfo — Connaître les pays du monde
+                </a>
+              </div>
+              <div class="proj-arrow">
+                <a href="https://zenithapps.pythonanywhere.com/LandInfo/" target="_blank" class="project-link">↗</a>
+              </div>
+            </div>
+            <p class="proj-desc">Encyclopédie des pays du monde : capitales, langues, monnaies et plus.</p>
+            <div class="proj-tags-row"><span class="p-tag">Django</span><span class="p-tag">API Rest</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet8/1.png" alt="LandInfo vue 1"></div>
+              <div class="p-img"><img src="images/projet8/2.png" alt="LandInfo vue 1"></div>
+              <div class="p-img"><img src="images/projet8/3.png" alt="LandInfo vue 1"></div>
+              <div class="p-img"><img src="images/projet8/4.png" alt="LandInfo vue 1"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">09</div>
+          <div>
+            <div class="proj-head">
+              <div class="proj-title">
+                <a href="https://zenithapps.pythonanywhere.com/SkyView/" target="_blank" class="project-link">
+                  SkyView — La météo proche de vous
+                </a>
+              </div>
+              <div class="proj-arrow">
+                <a href="https://zenithapps.pythonanywhere.com/SkyView/" target="_blank" class="project-link">↗</a>
+              </div>
+            </div>
+            <p class="proj-desc">Météo en temps réel, cartographie interactive et données satellite.</p>
+            <div class="proj-tags-row"><span class="p-tag">Django</span><span class="p-tag">API Rest</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet9/1.png" alt="SkyView vue 1"></div>
+              <div class="p-img"><img src="images/projet9/2.png" alt="SkyView vue 1"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">10</div>
+          <div>
+            <div class="proj-head">
+              <div class="proj-title">
+                <a href="https://zenithapps.pythonanywhere.com/PharmaBenin/" target="_blank" class="project-link">
+                  PharmaBenin — Le répertoire des pharmacies du Bénin
+                </a>
+              </div>
+              <div class="proj-arrow">
+                <a href="https://zenithapps.pythonanywhere.com/PharmaBenin/" target="_blank" class="project-link">↗</a>
+              </div>
+            </div>
+            <p class="proj-desc">Répertoire des pharmacies du Bénin : nom, adresse et informations de contact.</p>
+            <div class="proj-tags-row"><span class="p-tag">Django</span><span class="p-tag">API Rest</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet10/1.png" alt="PharmaBenin vue 1"></div>
+              <div class="p-img"><img src="images/projet10/2.png" alt="PharmaBenin vue 1"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-item rv">
+          <div class="proj-n">11</div>
+          <div>
+            <div class="proj-head">
+              <div class="proj-title">
+                <a href="https://zenithapps.pythonanywhere.com/Depenso/" target="_blank" class="project-link">
+                  Depenso — Gestionnaire de dépenses
+                </a>
+              </div>
+              <div class="proj-arrow">
+                <a href="https://zenithapps.pythonanywhere.com/Depenso/" target="_blank" class="project-link">↗</a>
+              </div>
+            </div>
+            <p class="proj-desc">Gestionnaire de dépenses : suivi des dépenses et budgétisation.</p>
+            <div class="proj-tags-row"><span class="p-tag">Django</span><span class="p-tag">SQLite</span></div>
+            <div class="proj-imgs c2">
+              <div class="p-img"><img src="images/projet11/1.png" alt="Depenso vue 1"></div>
+              <div class="p-img"><img src="images/projet11/2.png" alt="Depenso vue 1"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TECH STACK ══ -->
+  <div class="ts-section">
+    <div class="ts-wrap">
+      <div class="eyebrow rv"><span class="eyebrow-num">04</span><span class="eyebrow-line"></span><span class="eyebrow-label">Stack technique</span></div>
+      <h2 class="s-title rv">Technologies <em>maîtrisées</em></h2>
+      <div class="ts-grid">
+        <div class="ts-card rv d1"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django"><div class="ts-name">Django</div><div class="ts-cat c-be">Back-end</div></div>
+        <div class="ts-card rv d2"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><div class="ts-name">Python</div><div class="ts-cat c-be">Back-end</div></div>
+        <div class="ts-card rv d3"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel"><div class="ts-name">Laravel</div><div class="ts-cat c-be">Back-end</div></div>
+        <div class="ts-card rv d1"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" alt="Angular"><div class="ts-name">Angular</div><div class="ts-cat c-fe">Front-end</div></div>
+        <div class="ts-card rv d2"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"><div class="ts-name">JavaScript</div><div class="ts-cat c-fe">Front-end</div></div>
+        <div class="ts-card rv d3"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript"><div class="ts-name">TypeScript</div><div class="ts-cat c-fe">Front-end</div></div>
+        <div class="ts-card rv d1"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><div class="ts-name">PostgreSQL</div><div class="ts-cat c-db">Database</div></div>
+        <div class="ts-card rv d2"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"><div class="ts-name">MySQL</div><div class="ts-cat c-db">Database</div></div>
+        <div class="ts-card rv d2"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite"><div class="ts-name">SQLite</div><div class="ts-cat c-db">Database</div></div>
+        <div class="ts-card rv d3"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"><div class="ts-name">Git</div><div class="ts-cat c-vcs">Versioning</div></div>
+        <div class="ts-card rv d4"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1)"><div class="ts-name">GitHub</div><div class="ts-cat c-vcs">Versioning</div></div>
+        <div class="ts-card rv d5"><img class="ts-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" alt="GitLab"><div class="ts-name">GitLab</div><div class="ts-cat c-vcs">Versioning</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ EXPERIENCE ══ -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="eyebrow rv"><span class="eyebrow-num">05</span><span class="eyebrow-line"></span><span class="eyebrow-label">Parcours</span></div>
+      <h2 class="s-title rv">Mon <em>expérience</em></h2>
+      <div class="exp-grid">
+        <div class="rv-l">
+          <div class="exp-col-title">Expériences professionnelles</div>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-date">Janvier 2026 — Mai 2026</div>
+              <div class="tl-role">Stage Professionnel</div>
+              <div class="tl-co">OptiDix</div>
+              <div class="tl-desc"><ul>
+                <li>API REST Django pour la gestion de stocks multisectorielle</li>
+                <li>API REST Django pour une application de rencontre (matching, messagerie, compatibilité)</li>
+              </ul></div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">Février 2025 — Mai 2025</div>
+              <div class="tl-role">Stage Académique</div>
+              <div class="tl-co">IWAJU TECH</div>
+              <div class="tl-desc"><ul>
+                <li>Réalisation d'une application de notification pour factures SBEE et SONEB</li>
+                <li>Mise en place d'un fichier JSON de traduction Français–Anglais</li>
+                <li>Conception d'un système de gestion hospitalière</li>
+              </ul></div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">Juillet 2024 — Août 2024</div>
+              <div class="tl-role">Stage Académique</div>
+              <div class="tl-co">IWAJU TECH</div>
+              <div class="tl-desc"><ul>
+                <li>Modélisation de diagramme conceptuel de données</li>
+                <li>Réalisation des templates des modèles de CV, lettres de motivation et devis</li>
+                <li>Réalisation de dashboard pour une application de génération de CV</li>
+              </ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="rv-r">
+          <div class="exp-col-title">Formation</div>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-date">Octobre 2022 — Juin 2025</div>
+              <div class="tl-role">Licence Professionnelle en Système Informatique et Logiciel</div>
+              <div class="tl-co">École Supérieure le Faucon</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">Septembre 2019 — Juillet 2022</div>
+              <div class="tl-role">Baccalauréat, Série D</div>
+              <div class="tl-co">CEG le Méridien</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="eyebrow rv"><span class="eyebrow-num">06</span><span class="eyebrow-line"></span><span class="eyebrow-label">Contact</span></div>
+      <h2 class="s-title rv">Travaillons <em>ensemble</em></h2>
+      <div class="contact-grid">
+        <div class="rv-l">
+          <p class="contact-lead">Disponible pour des missions ou des postes de développeur full stack.</p>
+          <div class="c-links">
+
+            <a href="mailto:ordenkouton1@gmail.com" class="c-link rv d1">
+              <div class="cli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="fill:none;width:16px;height:16px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
+              <div class="cli-body"><span class="cli-label">Email</span><span class="cli-val">ordenkouton1@gmail.com</span></div>
+            </a>
+
+            <a href="https://wa.me/22962992332" target="_blank" class="c-link rv d2">
+              <div class="cli-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.526 5.855L0 24l6.336-1.506A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 01-5.003-1.368l-.36-.214-3.724.885.919-3.618-.235-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg></div>
+              <div class="cli-body"><span class="cli-label">WhatsApp</span><span class="cli-val">+229 01 62 99 23 32</span></div>
+            </a>
+
+            <a href="https://linkedin.com/in/orden-kouton" target="_blank" class="c-link rv d3">
+              <div class="cli-icon"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <div class="cli-body"><span class="cli-label">LinkedIn</span><span class="cli-val">linkedin.com/in/orden-kouton</span></div>
+            </a>
+
+            <a href="https://github.com/Orden-Ktn" target="_blank" class="c-link rv d4">
+              <div class="cli-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></div>
+              <div class="cli-body"><span class="cli-label">GitHub</span><span class="cli-val">github.com/Orden-Ktn</span></div>
+            </a>
+
+            <a href="https://www.facebook.com/koutonorden" target="_blank" class="c-link rv d5">
+              <div class="cli-icon"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.931-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></div>
+              <div class="cli-body"><span class="cli-label">Facebook</span><span class="cli-val">facebook.com/koutonorden</span></div>
+            </a>
+
+            <a href="https://x.com/KoutonOrden" target="_blank" class="c-link rv d6">
+              <div class="cli-icon"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+              <div class="cli-body"><span class="cli-label">X / Twitter</span><span class="cli-val">x.com/KoutonOrden</span></div>
+            </a>
+
+          </div>
+        </div>
+        <div class="rv-r">
+          <div class="contact-cta-card">
+            <div class="avail-badge">Disponible maintenant</div>
+            <h3 class="cta-title">Un projet en tête ? <em>Parlons-en.</em></h3>
+            <p class="cta-body">Que ce soit une idée à concrétiser, un MVP à lancer rapidement, ou une application existante à améliorer — je suis là pour vous accompagner de A à Z.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-inner">
+      <span class="foot-name">Fait par Orden Donadieu Fifa KOUTON</span>
+      <span class="foot-copy">© 2026 · Abomey-Calavi, Bénin</span>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
